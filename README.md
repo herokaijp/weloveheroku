@@ -1,4 +1,6 @@
-# we_love_heroku tempate application for rails4
+# We love heroku
+
+weloveheroku2
 
 ## Setup for development
 
