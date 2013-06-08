@@ -1,4 +1,4 @@
-Genuineblue::Application.configure do
+WeLoveHeroku::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # The test environment is used exclusively to run your application's
@@ -33,4 +33,14 @@ Genuineblue::Application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+  
+  ActionMailer::Base.delivery_method = :test
+  ActionMailer::Base.perform_deliveries = true
+  ActionMailer::Base.deliveries = []
+  
+  # guard-rails-assets
+  config.assets.prefix = 'assets-test'
+
+  # capybara
+  config.action_controller.asset_host = Figaro.env.test_asset_host if Figaro.env.test_asset_host.present?
 end

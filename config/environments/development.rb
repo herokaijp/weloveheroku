@@ -1,4 +1,4 @@
-Genuineblue::Application.configure do
+WeLoveHeroku::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -26,4 +26,7 @@ Genuineblue::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  ActionMailer::Base.delivery_method = :file
+  ActionMailer::Base.perform_deliveries = true
 end
