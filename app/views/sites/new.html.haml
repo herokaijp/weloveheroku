@@ -1,2 +1,10 @@
-%h1 Sites#new
-%p Find me in app/views/sites/new.html.haml
+%h1 New site
+= simple_form_for(@site) do |f|
+  = f.input(:name)
+  = f.input(:url)
+  = f.input(:description)
+  = f.input(:creator)
+  = f.input(:hash_tag)
+  = f.input(:repository_url)
+  = f.input(:please_design)
+  = f.submit()
