@@ -5,7 +5,15 @@ class SitesController < ApplicationController
   
   def create
     @site = Site.new(site_params)
-    @site.save
+    if @site.save
+      redirect_to site_path(@site), notice: '登録が完了しました'
+    else
+      render(:new)
+    end
+  end
+  
+  def show
+    @site = Site.find(params[:id])
   end
   
   private
