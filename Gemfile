@@ -15,6 +15,11 @@ gem 'active_decorator'
 gem 'rails-i18n'
 gem 'thin'
 
+# twitter bootstrap
+gem 'therubyracer'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'
+
 gem 'sass-rails', '~> 4.0.0.rc2'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0.rc2'
