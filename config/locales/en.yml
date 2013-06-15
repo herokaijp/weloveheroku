@@ -1,3 +1,6 @@
 en:
   site_info:
     title: 'We love heroku'
+  sites:
+    index:
+      detail_btn: 'Show detail'

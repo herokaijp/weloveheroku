@@ -1,6 +1,13 @@
 %h1 Site list
 
-%ul.sites
+%ul.unstyled.sites
   - @sites.each do |site|
     %li
-      %h2= link_to(site.name, site_path(site))
+      .row-fluid
+        .span3
+          = link_to(site.url) do
+            = image_tag("http://lorempixel.com/260/195?#{Random.rand}")
+        .span9
+          %h3= link_to(site.name, site_path(site))
+          %p= site.description
+          = link_to(t('.detail_btn'), site_path(site), class: 'btn')
