@@ -14,6 +14,16 @@ describe "Sites" do
         page.should have_content(site.name)
       end
     end
+
+    describe '詳細画面へアクセス' do
+      before do
+        click_on(site.name)
+      end
+
+      it '詳細画面へ移動すること' do
+        page.current_path.should eq site_path(site)
+      end
+    end
   end
 
   describe 'サイト登録画面へアクセスする' do
