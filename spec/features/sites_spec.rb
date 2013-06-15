@@ -1,11 +1,18 @@
 require 'spec_helper'
 describe "Sites" do
   describe 'サイト一覧画面へアクセスする' do
+    let!(:site) { FactoryGirl.create(:site) }
     before do
       visit sites_path
     end
     it '画面が表示されること' do
       page.should have_content('Site list')
+    end
+
+    it '登録されたサイトが表示されること' do
+      within('ul.sites') do
+        page.should have_content(site.name)
+      end
     end
   end
 
