@@ -7,8 +7,8 @@ describe "Application" do
       visit '/'
     end
 
-    it 'コンテンツが表示されること', js: true do
-      page.should have_content('Welcome')
+    it 'コンテンツが表示されること' do
+      page.should have_content('Site list')
     end
   end
 end
