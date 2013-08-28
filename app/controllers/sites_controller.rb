@@ -4,7 +4,7 @@ class SitesController < ApplicationController
   end
   
   def index
-    @site = Site.all
+    @sites = Site.all
   end
   
   def create
