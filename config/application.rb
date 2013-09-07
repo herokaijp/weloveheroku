@@ -38,6 +38,3 @@ module WeLoveHeroku
     config.action_mailer.default_url_options = { host: Figaro.env.host }
   end
 end
-
-#for using 'strong_parameters'
-config.active_record.whitelist_attributes = false
