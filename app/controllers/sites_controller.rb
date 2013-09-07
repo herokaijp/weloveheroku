@@ -3,6 +3,10 @@ class SitesController < ApplicationController
     @site = Site.new
   end
   
+  def index
+    @sites = Site.all
+  end
+  
   def create
     @site = Site.new(site_params)
     if @site.save

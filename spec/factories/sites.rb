@@ -5,6 +5,7 @@ FactoryGirl.define do
     name Faker::Name.name
     url Faker::Internet.url
     description Faker::Lorem.paragraph
+    creator Faker::Name.name
     hash_tag '#twitter_hash_tag'
     repository_url 'http://github.com/herokai/weloveheroku'
     scheduled_access false
